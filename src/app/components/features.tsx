@@ -30,6 +30,7 @@ const FeatureItem = ({ title, description }: { title: string; description: strin
 
 const Feature = ({ id, title, description, features, animationData, reverse = false }: 
   { id:string, title: string, description: string, features:{title:string,description:string}[], animationData: any, reverse?: boolean }) => {
+    
     return (
       <section id={id} className="relative py-20 bg-gradient-to-r from-green-50 to-green-100 rounded-t-[50px] shadow-lg -mt-16" >
       <h2 className="text-4xl font-bold text-center text-green-700 mb-16">{title}</h2>
