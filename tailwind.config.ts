@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#38A169",  // Greenish color for the theme
+        secondary: "#2F855A", // Darker green
       },
     },
   },

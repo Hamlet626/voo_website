@@ -1,0 +1,80 @@
+.features-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .features-part {
+    margin: 40px 0;
+  }
+  
+  .features-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .feature-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .feature-text {
+    width: 45%;
+    text-align: left;
+  }
+  
+  .feature-text h3 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .feature-text p {
+    font-size: 16px;
+  }
+  
+  .feature-animation {
+    width: 45%;
+  }
+  
+  .reverse .feature-text {
+    text-align: right;
+  }
+  
+  .reverse .feature-animation {
+    order: -1; /* Switches order */
+  }
+  
+  .lottie-animation {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .feature-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .feature-text,
+    .feature-animation {
+      width: 100%;
+    }
+  
+    .reverse .feature-animation {
+      order: initial; /* Switch back to default order on mobile */
+    }
+  }
+  
