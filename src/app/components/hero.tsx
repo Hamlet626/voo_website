@@ -1,7 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
+
 import Header from "./header";
+import HeroCarousel from "./heroCarousel";
 // import styled from "styled-components";
+
 
 const HeroSection = () => {
     // const videoWidth = Math.max(window.innerWidth / 2.4, 460);
@@ -26,8 +27,10 @@ const HeroSection = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black via-[33%] to-black/50 to-[70%]"></div>
 
+
+      <HeroCarousel/>
       {/* Hero Content */}
-      <div className="absolute left-8 sm:left-32 top-1/2 -translate-y-1/2 pl-0 w-[90%] sm:w-1/3 sm:min-w-[500px] text-white drop-shadow-md">
+      {/* <div className="absolute left-8 sm:left-32 top-1/2 -translate-y-1/2 pl-0 w-[90%] sm:w-1/3 sm:min-w-[500px] text-white drop-shadow-md"> */}
           {/* <h1 className="text-5xl font-bold mb-6">
             Transform Your Everyday Life
           </h1>
@@ -43,49 +46,32 @@ const HeroSection = () => {
             </a>
           </div> */}
           
-          <h1 className="text-white text-5xl font-bold">
+          {/* <h1 className="text-white text-5xl font-bold">
           Turn Your Skills into a Thriving Business.
         </h1>
         <p className="text-gray-300 mt-4 text-lg">
           From scheduling to payments—run your service business without the hassle.
           Voo makes it easy for freelancers and service providers to stay organized, 
           find clients, and get paid—effortlessly.
-        </p>
+        </p> */}
 
         {/* Optional Tagline for Extra Impact */}
-        <p className="text-gray-400 italic mt-2 text-md">
+        {/* <p className="text-gray-400 italic mt-2 mb-16 text-md">
           Your passion. Your hustle. Your business—simplified.
         </p>
+        
+        <AppEntry text={'Browse the Services Now'}
+        playLink={'https://play.google.com/store/apps/details?id=dev.voo.providers'} 
+        appleLink={'https://apps.apple.com/us/app/百事通-voo/id6745773650'}
+        isPvd={false}
+        />
 
-        {/* Store Buttons */}
-        <div className="flex gap-4 mt-16">
-          {/* Google Play Button */}
-          <Link href="https://play.google.com/store/apps/details?id=dev.voo.providers" target="_blank">
-            <button className="flex items-center gap-3 px-5 py-3 bg-gray-300 text-black font-semibold rounded-lg shadow-md hover:bg-gray-400 transition text-lg">
-              <Image
-                src="/images/playstore.svg"
-                alt="Google Play"
-                width={28}
-                height={28}
-              />
-              Google Play
-            </button>
-          </Link>
-
-          {/* Apple Store Button */}
-          <Link href="https://apps.apple.com/us/app/voo-pro-book-manage-earn/id6740048998" target="_blank">
-            <button className="flex items-center gap-3 px-5 py-3 bg-gray-300 text-black font-semibold rounded-lg shadow-md hover:bg-gray-400 transition text-lg">
-              <Image
-                src="/images/applestore.svg"
-                alt="Apple Store"
-                width={28}
-                height={28}
-              />
-              Apple Store
-            </button>
-          </Link>
-        </div>
-      </div>
+        <AppEntry text={'Become a Helper'}
+        playLink={'https://play.google.com/store/apps/details?id=dev.voo.providers'} 
+        appleLink={'https://apps.apple.com/us/app/voo-pro-百事通店商/id6740048998'}
+        isPvd
+        />
+      </div> */}
       
     </section>
     );

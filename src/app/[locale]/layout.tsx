@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Footer from "./components/footer";
+import "../globals.css";
+import Footer from "../components/footer";
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
 
-
+///Manage booking and payment for running a service business.
 const app_description = `
-Voo Pro – Grow Your Service Business with Ease!
+Voo Pro – Start & Manage & Grow Your Service Business with Ease!
 Voo Pro is the ultimate app for service providers looking to expand their business and connect with customers effortlessly. Whether you're a cleaner, handyman, coach, plumber, electrician, or car mechanic, Voo Pro helps you manage bookings, receive secure payments, and grow your client base—all in one place.
 
 Why Choose Voo Pro?
@@ -71,8 +74,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/app_icon.png", // Add an appropriate image
-        width: 630,
-        height: 630,
+        width: 500,
+        height: 500,
       },
     ],
     type: "website",
@@ -86,17 +89,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }>) {
-  return (
-    <html lang="en">
-      <body className="font-sans bg-white text-gray-900">
+  // Ensure that the incoming `locale` is valid
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-        <main>{children}</main>
-        <Footer/>
+  return (
+    <html lang={locale}>
+      <body className="font-sans bg-white text-gray-900">
+        <NextIntlClientProvider>
+          <main>{children}</main>
+          <Footer/>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

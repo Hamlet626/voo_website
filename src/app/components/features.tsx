@@ -3,22 +3,24 @@
 import dynamic from 'next/dynamic';
 // import { motion } from 'framer-motion'
 // import { Users, Briefcase } from 'lucide-react'
+import {useTranslations} from 'next-intl';
 import cusAnimation from '../../../public/lottie/customer_website.json';
 import pvdAnimation from '../../../public/lottie/helper_website.json';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
-const featuresCustomers = [
-  { title: 'Transparent Pricing & Availability', description: 'View prices, check availability, and book helpers that best fit your budget and schedule. No surprises, just straightforward pricing and hassle-free scheduling.' },
-  { title: 'Explore Profiles & Reviews', description: "Get to know your helper before booking. Each profile includes details about their skills, experience, and services. Plus, customer reviews and ratings help you make an informed choice, ensuring you're choosing the right person for the job." },
-  { title: 'Effortless Booking Process', description: "Our booking system is simple and efficient. Once you book, you can edit your appointment and wait for final approval before confirmation, ensuring everything is perfect." },
-]
 
-const featuresProviders = [
-  { title: 'Share Your Personal Profile Link', description: "Easily showcase your skills and services with a personalized link, making it simple for customers to book and for you to track all your bookings in one place." },
-  { title: 'Manage Your Time with Ease', description: 'Keep track of your scheduled jobs and block out availability directly from your calendar. Our platform keeps you organized so you can focus on delivering great service.' },
-  { title: 'Guaranteed & Secure Payments', description: 'Payments are collected in advance, providing smooth experience and reliability for your work. No delays, no worries—just fast, hassle-free payouts you can trust.' },
-]
+// const featuresCustomers = [
+//   { title: 'Transparent Pricing & Availability', description: 'View prices, check availability, and book helpers that best fit your budget and schedule. No surprises, just straightforward pricing and hassle-free scheduling.' },
+//   { title: 'Explore Profiles & Reviews', description: "Get to know your helper before booking. Each profile includes details about their skills, experience, and services. Plus, customer reviews and ratings help you make an informed choice, ensuring you're choosing the right person for the job." },
+//   { title: 'Effortless Booking Process', description: "Our booking system is simple and efficient. Once you book, you can edit your appointment and wait for final approval before confirmation, ensuring everything is perfect." },
+// ]
+
+// const featuresProviders = [
+//   { title: 'Share Your Personal Profile Link', description: "Easily showcase your skills and services with a personalized link, making it simple for customers to book and for you to track all your bookings in one place." },
+//   { title: 'Manage Your Time with Ease', description: 'Keep track of your scheduled jobs and block out availability directly from your calendar. Our platform keeps you organized so you can focus on delivering great service.' },
+//   { title: 'Guaranteed & Secure Payments', description: 'Payments are collected in advance, providing smooth experience and reliability for your work. No delays, no worries—just fast, hassle-free payouts you can trust.' },
+// ]
 
 // Reusable Feature Item
 const FeatureItem = ({ title, description }: { title: string; description: string }) => (
@@ -59,16 +61,29 @@ const Feature = ({ id, title, description, features, animationData, reverse = fa
   };
   
   const FeaturesSection = () => {
+    const t = useTranslations('HomePage');
+
+    const featuresCustomers = t.raw('customerFeatures.items');
+    const featuresProviders = t.raw('providerFeatures.items');
+
     return (
       <>
-      <Feature id='customer-features'
-      title="Grow Your Business, Easily and Securely" 
-      description="Helping others has never been easier or more rewarding. With Voo, you can grow your business, stay organized, and get paid quickly and securely." 
-      features={featuresProviders} animationData={pvdAnimation} reverse/>
-      <Feature id='provider-features'
-      title="Find the Help You Need, Whenever You Need It" 
-      description="At Voo, we make it easy for you to connect with reliable and skilled helpers in your area. Whether you need a coach, a cleaner, or any other service, you’ll find the perfect fit."
-       features={featuresCustomers} animationData={cusAnimation}/>
+        <Feature
+          id="customer-features"
+          title={t('customerFeatures.title')}
+          description={t('customerFeatures.description')}
+          features={featuresCustomers}
+          animationData={cusAnimation}
+        />
+
+        <Feature
+          id="provider-features"
+          title={t('providerFeatures.title')}
+          description={t('providerFeatures.description')}
+          features={featuresProviders}
+          animationData={pvdAnimation}
+          reverse
+        />
       </>
     );
   };

@@ -1,0 +1,40 @@
+/*
+  This file should be saved as `HeroSection.module.css`
+  in the *same directory* as your `HeroSection.tsx` component.
+*/
+
+/* Define a custom fade-in animation */
+/* .fadeIn {
+  opacity: 0; 
+  animation: fadeIn-only-opacity 1s ease-out forwards;
+} */
+
+/* @keyframes fadeIn-only-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/* Define the linear progress fill animation */
+.progressFill {
+  animation: progress-fill 10s linear forwards; /* 8s matches interval duration */
+}
+
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*
+  Note: Body styles and global font imports should typically be in your global CSS
+  (e.g., app/globals.css or styles/globals.css in a Next.js project).
+  Only component-specific styles and animations that you want to be locally scoped
+  should be in this .module.css file.
+*/

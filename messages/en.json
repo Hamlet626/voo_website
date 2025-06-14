@@ -1,0 +1,110 @@
+{
+  "HomePage": {
+    "appName":"Voo",
+    "header":{
+        "customersButton":"Customers",
+        "helpersButton":"Helpers"
+    },
+    "googlePlay":"Google Play",
+    "appleStore":"Apple Store",
+    "customer": {
+      "heading": "Transform Your Everyday Life",
+      "body": "Find Trusted Local Services in Minutes —-Browse top-rated professionals, compare prices, read real reviews, and book instantly.",
+      "tagline": "Your everyday solutions, simplified.",
+      "appEntry": "Explore the Services Now"
+    },
+    "provider": {
+      "heading": "Turn Your Skills into a Thriving Business.",
+      "body": "From scheduling to payments, Voo makes it easy for freelancers and service providers to stay organized, find clients, and get paid —effortlessly.",
+      "tagline": "Your passion. Your hustle. Your business—simplified.",
+      "appEntry": "Join As a Helper"
+    },
+
+    "customerFeatures": {
+      "title": "Find the Help You Need, Whenever You Need It",
+      "description": "At Voo, we make it easy for you to connect with reliable and skilled helpers in your area. Whether you need a coach, a cleaner, or any other service, you’ll find the perfect fit.",
+      "items": [
+        {
+          "title": "Transparent Pricing & Availability",
+          "description": "View prices, check availability, and book helpers that best fit your budget and schedule. No surprises, just straightforward pricing and hassle-free scheduling."
+        },
+        {
+          "title": "Explore Profiles & Reviews",
+          "description": "Get to know your helper before booking. Each profile includes details about their skills, experience, and services. Plus, customer reviews and ratings help you make an informed choice, ensuring you're choosing the right person for the job."
+        },
+        {
+          "title": "Effortless Booking Process",
+          "description": "Our booking system is simple and efficient. Once you book, you can edit your appointment and wait for final approval before confirmation, ensuring everything is perfect."
+        }
+      ]
+    },
+    "providerFeatures": {
+      "title": "Grow Your Business, Easily and Securely",
+      "description": "Helping others has never been easier or more rewarding. With Voo, you can grow your business, stay organized, and get paid quickly and securely.",
+      "items": [
+        {
+          "title": "Share Your Personal Profile Link",
+          "description": "Easily showcase your skills and services with a personalized link, making it simple for customers to book and for you to track all your bookings in one place."
+        },
+        {
+          "title": "Manage Your Time with Ease",
+          "description": "Keep track of your scheduled jobs and block out availability directly from your calendar. Our platform keeps you organized so you can focus on delivering great service."
+        },
+        {
+          "title": "Guaranteed & Secure Payments",
+          "description": "Payments are collected in advance, providing smooth experience and reliability for your work. No delays, no worries—just fast, hassle-free payouts you can trust."
+        }
+      ]
+    }
+  },
+
+  "Services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Auto Mobile",
+        "description": "Whether it's routine maintenance or an emergency repair, our mobile auto services bring the mechanic to you, making car care more convenient than ever."
+      },
+      {
+        "title": "Coaching",
+        "description": "Personalized coaching for sports, fitness, career growth, and more — helping you reach your goals."
+      },
+      {
+        "title": "Housekeeping",
+        "description": "Our trusted housekeeping services will make your home shine. Enjoy a cleaner, more organized space with ease."
+      },
+      {
+        "title": "Delivery",
+        "description": "Fast, reliable, and professional delivery services for packages of all sizes."
+      },
+      {
+        "title": "Handyman Services",
+        "description": "From minor repairs to home improvement, our handymen will fix anything. Get the job done right with skilled professionals at your service."
+      },
+      {
+        "title": "Pet Services",
+        "description": "From pet grooming to sitting, we provide top-quality care for your furry friends, ensuring they stay happy and healthy when you're away."
+      }
+    ],
+    "seeMore": "See More Services"
+  },
+
+  "Footer": {
+    "terms": {
+      "title": "Terms of Service",
+      "description": "By using our services, you agree to our terms. Learn more about your rights and responsibilities.",
+      "linkText": "Read More →"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Your privacy is important to us. Read how we protect and use your data responsibly.",
+      "linkText": "Read More →"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Have questions? We're here to help! Reach out to our support team.",
+      "linkText": "Get in Touch →"
+    },
+    "copyright": "© {year} Voo Dev LLC. All Rights Reserved."
+  }
+}

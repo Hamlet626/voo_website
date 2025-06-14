@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Hero from "./components/hero";
-import Features from "./components/features";
-import ServicesSection from "./components/services";
+import Hero from "../components/hero";
+import Features from "../components/features";
+import ServicesSection from "../components/services";
 
 
 const structuredData = {
