@@ -4,12 +4,12 @@ import { FaFootball } from "react-icons/fa6";
 
 
 const iconMap = [
-  <FaCar className="text-4xl text-green-500 mx-auto mb-4" />,
-  <FaChalkboardTeacher className="text-4xl text-green-500 mx-auto mb-4" />,
-  <FaBroom className="text-4xl text-green-500 mx-auto mb-4" />,
-  <FaTruck className="text-4xl text-green-500 mx-auto mb-4" />,
-  <FaTools className="text-4xl text-green-500 mx-auto mb-4" />,
-  <FaDog className="text-4xl text-green-500 mx-auto mb-4" />
+  <FaCar key={1} className="text-4xl text-green-500 mx-auto mb-4" />,
+  <FaChalkboardTeacher key={2} className="text-4xl text-green-500 mx-auto mb-4" />,
+  <FaBroom key={3} className="text-4xl text-green-500 mx-auto mb-4" />,
+  <FaTruck key={4} className="text-4xl text-green-500 mx-auto mb-4" />,
+  <FaTools key={5} className="text-4xl text-green-500 mx-auto mb-4" />,
+  <FaDog key={6} className="text-4xl text-green-500 mx-auto mb-4" />
 ];
 
 
