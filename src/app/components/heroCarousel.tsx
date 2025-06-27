@@ -15,8 +15,8 @@ const contentBlocks = [
     tagline: 'Your everyday solutions, simplified.',
     appEntryProps: { // Props to pass to the AppEntry component
       text: 'Explore the Services Now',
-      playLink: 'https://play.google.com/store/apps/details?id=dev.voo.clients',
-      appleLink: 'https://apps.apple.com/us/app/百事通-voo/id6745773650',
+      playLink: 'https://play.google.com/store/apps/details?id=dev.voo.customers',
+      appleLink: 'https://apps.apple.com/us/app/百事通-您需要的生活服务/id6747854851',
       isPvd: false // Original prop from your AppEntry
     }
   },
