@@ -6,36 +6,6 @@ import styles from './HeroCarousel.module.css';
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-const contentBlocks = [
-  {
-    id: 'customer', // Unique identifier for this content block
-    hash: 'customerApp', // The URL hash associated with this content
-    heading: 'Transform Your Everyday Life',
-    body: 'Find Trusted Local Services in Minutes —-Browse top-rated professionals, compare prices, read real reviews, and book instantly.',
-    tagline: 'Your everyday solutions, simplified.',
-    appEntryProps: { // Props to pass to the AppEntry component
-      text: 'Explore the Services Now',
-      playLink: 'https://play.google.com/store/apps/details?id=dev.voo.customers',
-      appleLink: 'https://apps.apple.com/us/app/百事通-您需要的生活服务/id6747854851',
-      isPvd: false // Original prop from your AppEntry
-    }
-  },
-  {
-    id: 'provider', // Unique identifier for this content block
-    hash: 'providerApp', // The URL hash associated with this content
-    heading: 'Turn Your Skills into a Thriving Business.',
-    body: 'From scheduling to payments, Voo makes it easy for freelancers and service providers to stay organized, find clients, and get paid —effortlessly.',
-    tagline: 'Your passion. Your hustle. Your business—simplified.',
-    // isAppEntry: true, // Flag to indicate using the AppEntry component for CTAs
-    appEntryProps: { // Props to pass to the AppEntry component
-      text: 'Join As a Helper',
-      playLink: 'https://play.google.com/store/apps/details?id=dev.voo.providers',
-      appleLink: 'https://apps.apple.com/us/app/voo-pro-百事通店商/id6740048998',
-      isPvd: true // Original prop from your AppEntry
-    }
-  }
-];
-
 
 
 const AppEntry=({text,playLink,appleLink, isPvd}:{text: string, playLink: string, appleLink: string, isPvd:boolean})=>{
@@ -147,8 +117,8 @@ const HeroCarousel = ()=>{
         tagline: t('customer.tagline'),
         appEntryProps: {
             text: t('customer.appEntry'),
-            playLink: 'https://play.google.com/store/apps/details?id=dev.voo.providers',
-            appleLink: 'https://apps.apple.com/us/app/百事通-voo/id6745773650',
+            playLink: 'https://play.google.com/store/apps/details?id=dev.voo.customers',
+            appleLink: 'https://apps.apple.com/us/app/百事通-您需要的生活服务/id6747854851',
             isPvd: false
         }
     },
