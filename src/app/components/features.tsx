@@ -69,14 +69,6 @@ const Feature = ({ id, title, description, features, animationData, reverse = fa
     return (
       <>
         <Feature
-          id="customer-features"
-          title={t('customerFeatures.title')}
-          description={t('customerFeatures.description')}
-          features={featuresCustomers}
-          animationData={cusAnimation}
-        />
-
-        <Feature
           id="provider-features"
           title={t('providerFeatures.title')}
           description={t('providerFeatures.description')}
@@ -84,6 +76,15 @@ const Feature = ({ id, title, description, features, animationData, reverse = fa
           animationData={pvdAnimation}
           reverse
         />
+        
+        <Feature
+          id="customer-features"
+          title={t('customerFeatures.title')}
+          description={t('customerFeatures.description')}
+          features={featuresCustomers}
+          animationData={cusAnimation}
+        />
+
       </>
     );
   };

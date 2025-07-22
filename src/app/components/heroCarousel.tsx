@@ -11,12 +11,20 @@ import { useTranslations } from "next-intl";
 const AppEntry=({text,playLink,appleLink, isPvd}:{text: string, playLink: string, appleLink: string, isPvd:boolean})=>{
 // {/* Store Buttons */}
     const t = useTranslations('HomePage');
-const buttonStyle=`flex items-center gap-3 px-5 py-3 ${isPvd?'bg-gray-500':'bg-gray-300'} ${isPvd?'text-gray-200':'text-black'} font-semibold rounded-lg shadow-md hover:bg-gray-400 transition text-lg`;
+    const buttonStyle=`flex items-center gap-3 px-5 py-3 ${isPvd?'bg-gray-500':'bg-gray-300'} ${isPvd?'text-gray-200':'text-black'} font-semibold rounded-lg shadow-md hover:bg-gray-400 transition text-lg`;
+  
+    const targetUrl = isPvd ? "https://voo-pro.web.app" : "https://voo.today";
   return <>
-    <p className="text-gray-300 mt-8 text-lg">
-          {text+' →'}
-        </p>
-    <div className="flex gap-4 mt-2">
+    <Link
+      href={targetUrl} target="_blank" rel="noopener noreferrer"
+      className="group text-green-400 mt-8 text-lg font-semibold transition-colors duration-300 hover:text-green-300"
+    >
+      {text}{' '}
+      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+        &rarr;
+      </span>
+    </Link>
+    <div className="flex gap-4 mt-8">
       {/* Google Play Button */}
       <Link href={playLink} target="_blank">
         <button className={buttonStyle}>
@@ -110,19 +118,6 @@ const HeroCarousel = ()=>{
   const t = useTranslations('HomePage');
   const contentBlocks = [
     {
-        id: 'customer',
-        hash: 'customerApp',
-        heading: t('customer.heading'),
-        body: t('customer.body'),
-        tagline: t('customer.tagline'),
-        appEntryProps: {
-            text: t('customer.appEntry'),
-            playLink: 'https://play.google.com/store/apps/details?id=dev.voo.customers',
-            appleLink: 'https://apps.apple.com/us/app/百事通-您需要的生活服务/id6747854851',
-            isPvd: false
-        }
-    },
-    {
         id: 'provider',
         hash: 'providerApp',
         heading: t('provider.heading'),
@@ -133,6 +128,19 @@ const HeroCarousel = ()=>{
             playLink: 'https://play.google.com/store/apps/details?id=dev.voo.providers',
             appleLink: 'https://apps.apple.com/us/app/voo-pro-百事通店商/id6740048998',
             isPvd: true
+        }
+    },
+    {
+        id: 'customer',
+        hash: 'customerApp',
+        heading: t('customer.heading'),
+        body: t('customer.body'),
+        tagline: t('customer.tagline'),
+        appEntryProps: {
+            text: t('customer.appEntry'),
+            playLink: 'https://play.google.com/store/apps/details?id=dev.voo.customers',
+            appleLink: 'https://apps.apple.com/us/app/百事通-您需要的生活服务/id6747854851',
+            isPvd: false
         }
     }
   ];

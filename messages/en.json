@@ -9,15 +9,15 @@
     "appleStore":"Apple Store",
     "customer": {
       "heading": "Transform Your Everyday Life",
-      "body": "Find Trusted Local Services in Minutes —-Browse top-rated professionals, compare prices, read real reviews, and book instantly.",
+      "body": "Find Trusted Local Services in Minutes ——Browse top-rated professionals, compare prices, read real reviews, and book instantly.",
       "tagline": "Your everyday solutions, simplified.",
       "appEntry": "Explore the Services Now"
     },
     "provider": {
-      "heading": "Turn Your Skills into a Thriving Business.",
-      "body": "From scheduling to payments, Voo makes it easy for freelancers and service providers to stay organized, find clients, and get paid —effortlessly.",
-      "tagline": "Your passion. Your hustle. Your business—simplified.",
-      "appEntry": "Join As a Helper"
+      "heading": "Turn Your Skills into an Online Business.",
+      "body": "Voo instantly creates a professional website for your services. Showcase your work, manage your schedule, message clients, and accept payments  ——all from one platform with your own unique site.",
+      "tagline": "Your all-in-one business site, scheduler, and payment processor.",
+      "appEntry": "Build My Business Site"
     },
 
     "customerFeatures": {

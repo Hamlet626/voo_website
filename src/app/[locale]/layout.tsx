@@ -39,6 +39,10 @@ export const metadata: Metadata = {
   description: app_description,
   keywords: [
     "Voo",
+    "Webiste",
+    "Website Builder",
+    "Free Webiste",
+    "Own Webiste",
     "Service Providers",
     "Freelance Services",
     "Booking App",
@@ -103,7 +107,7 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className="font-sans bg-white text-gray-900">
         <NextIntlClientProvider>
           <main>{children}</main>
