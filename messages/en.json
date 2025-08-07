@@ -17,7 +17,7 @@
       "heading": "Turn Your Skills into an Online Business.",
       "body": "Voo instantly creates a professional website for your services. Showcase your work, manage your schedule, message clients, and accept payments  ——all from one platform with your own unique site.",
       "tagline": "Your all-in-one business site, scheduler, and payment processor.",
-      "appEntry": "Build My Business Site"
+      "appEntry": "Join as a Helper"
     },
 
     "customerFeatures": {
@@ -54,6 +54,58 @@
           "title": "Guaranteed & Secure Payments",
           "description": "Payments are collected in advance, providing smooth experience and reliability for your work. No delays, no worries—just fast, hassle-free payouts you can trust."
         }
+      ]
+    }
+  },
+  "PvdPage":{
+    "hero":{
+      "ctaWeb": "Get Started Now →",
+      "ctaGoogle": "Download on Google Play",
+      "ctaApple": "Download on the App Store",
+      "title": "Turn Your Skills into a Professional Online Business.",
+      "subtitle": "We give you the all-in-one toolkit to look professional, get booked, and grow your client base—effortlessly. Stop juggling apps and start building your brand."
+    },
+    "features": {
+      "website": {
+        "label": "Your Pro Website",
+        "title": "Your Professional Website",
+        "description": "Get a stunning, no-code website in minutes. Showcase your work and impress clients from the moment they land on your page."
+      },
+      "scheduling": {
+        "label": "Smart Scheduling",
+        "title": "Effortless 24/7 Bookings",
+        "description": "Set your availability and let clients book you online anytime. End the back-and-forth emails and never miss an opportunity."
+      },
+      "ai": {
+        "label": "AI Social Growth",
+        "title": "Effortless Marketing, Real Growth",
+        "description": "Simply upload your latest work, and our AI instantly crafts engaging posts. We even run targeted ad campaigns to put your services in front of new local clients."
+      },
+      "messaging": {
+        "label": "Client Messaging",
+        "title": "All Conversations, One Place",
+        "description": "Keep every client message, file, and project approval organized and accessible. Say goodbye to scattered communication."
+      }
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "description": "No subscriptions. No hidden costs. You choose how you get paid for every booking.",
+      "plans": [
+        [
+          "Collect Service Payment",
+          "Online Payments",
+          "In-Person Payments"
+        ],
+        [
+            "Platform Fee",
+            "6%",
+            "Free"
+        ],
+        [
+            "Payment Time",
+            "2 days before booked time",
+            "-"
+          ]
       ]
     }
   },
