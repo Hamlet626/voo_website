@@ -41,7 +41,7 @@ export default function ProPricing() {
           <div className="p-4 text-lg text-white bg-gray-700/50 rounded-tr-xl text-center font-semibold">{pricingData[0][2]}</div>
           
           <div className="p-4 text-left font-medium text-gray-300 border-t border-gray-700">{pricingData[1][0]}</div>
-          <div className="p-4 text-2xl font-bold border-x border-t border-gray-700 text-center">{pricingData[1][1]}</div>
+          <div className="p-4 text-2xl font-bold border-x border-t border-gray-700 text-center">6%</div>
           <div className="p-4 text-2xl font-bold border-t border-gray-700 bg-gray-700/50 text-center">{pricingData[1][2]}</div>
 
           <div className="p-4 text-left font-medium text-gray-300 border-t border-gray-700">{pricingData[2][0]}</div>

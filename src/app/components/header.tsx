@@ -45,16 +45,16 @@ export default function Header() {
       {/* Navigation Links */}
       <div className="flex space-x-8 ml-auto mr-8 sm:mr-20">
           <Link 
-          href="/customers" 
+          href="/c" 
           className={`py-2 ${//isClient && 
-            isPathActive('/customers') ? activeLinkStyle : inactiveLinkStyle}`}
+            isPathActive('/c') ? activeLinkStyle : inactiveLinkStyle}`}
         >
           {t('header.customersButton')}
         </Link>
         <Link 
-          href="/providers" 
+          href="/v" 
           className={`py-2 ${//isClient && 
-            isPathActive('/providers') ? activeLinkStyle : inactiveLinkStyle}`}
+            isPathActive('/v') ? activeLinkStyle : inactiveLinkStyle}`}
         >
           {t('header.helpersButton')}
           </Link>
