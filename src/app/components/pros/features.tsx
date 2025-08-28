@@ -54,8 +54,8 @@ const features = [
 type FeatureId = 'website' | 'scheduling' | 'ai' | 'messaging';
 
 // --- App Store Links ---
-const APPLE_STORE_LINK = "https://apps.apple.com/your-app-id";
-const GOOGLE_PLAY_LINK = "https://play.google.com/store/apps/details?id=your.package.name";
+const APPLE_STORE_LINK = "https://apps.apple.com/us/app/voo-pro-百事通店商/id6740048998";
+const GOOGLE_PLAY_LINK = "https://play.google.com/store/apps/details?id=dev.voo.providers";
 const WEB_APP_LINK = "/signup";
 
 export default function ProsFeatures() {
