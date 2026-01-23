@@ -158,5 +158,13 @@
       "linkText": "Get in Touch →"
     },
     "copyright": "© {year} Voo Dev LLC. All Rights Reserved."
+  },
+
+
+  "Legal": {
+    "termsTitle": "Terms of Service",
+    "privacyTitle": "Privacy Policy",
+    "loading": "Loading latest policies...",
+    "lastUpdated": "Last Updated: {date}"
   }
 }

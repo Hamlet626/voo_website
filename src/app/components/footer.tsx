@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">{t('terms.title')}</h3>
             <p className="text-gray-400 text-sm">{t('terms.description')}</p>
-            <a href="https://voo-pro.web.app/terms-of-service" className="text-green-400 hover:text-green-300 inline-block mt-2">
+            <a href="/legal/terms" className="text-green-400 hover:text-green-300 inline-block mt-2">
               {t('terms.linkText')}
             </a>
           </div>
@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">{t('privacy.title')}</h3>
             <p className="text-gray-400 text-sm">{t('privacy.description')}</p>
-            <a href="https://voo-pro.web.app/privacy-policy" className="text-green-400 hover:text-green-300 inline-block mt-2">
+            <a href="/legal/privacy" className="text-green-400 hover:text-green-300 inline-block mt-2">
               {t('privacy.linkText')}
             </a>
           </div>

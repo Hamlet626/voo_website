@@ -1,0 +1,22 @@
+runConfig:
+  cpu: 1          # 根据需要调整 CPU 核心数
+  memoryMiB: 2048 # 根据需要调整内存
+  minInstances: 0 # 0 表示无流量时缩容到0（省钱），1 表示保持一个实例（响应快）
+  maxInstances: 10
+  concurrency: 80
+
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: "AIzaSyDK5l5tfzXnIG_fJHqpN2p7r3PUIo2qkuw"
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "voo-platform.firebaseapp.com"
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "voo-platform"
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "voo-platform.appspot.com"
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "901293854405"
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:901293854405:web:d23a4b9fbb9ce4e76baaac"
+  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: "G-0B3FK8N7S5"

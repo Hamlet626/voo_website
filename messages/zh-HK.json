@@ -154,5 +154,13 @@
       "linkText": "即時聯絡 →"
     },
     "copyright": "© {year} 百事通開發公司 版權所有。"
+  },
+
+
+  "Legal": {
+    "termsTitle": "服務條款",
+    "privacyTitle": "私隱政策",
+    "loading": "正在載入最新政策...",
+    "lastUpdated": "最後更新：{date}"
   }
 }

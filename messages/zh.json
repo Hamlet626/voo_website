@@ -154,5 +154,13 @@
       "linkText": "立即联系 →"
     },
     "copyright": "© {year} 百事通开发公司 版权所有。"
+  },
+
+
+  "Legal": {
+    "termsTitle": "用户服务协议",
+    "privacyTitle": "隐私政策",
+    "loading": "正在加载最新条款...",
+    "lastUpdated": "最后更新：{date}"
   }
 }
