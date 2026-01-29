@@ -22,8 +22,9 @@ const HeroSection = () => {
         className="absolute right-0 top-0 h-full w-2/3 object-cover"
       >
         <source 
-        src="https://firebasestorage.googleapis.com/v0/b/voo-platform.appspot.com/o/assets%2Fslow.mp4?alt=media&token=09d8ecbe-8ebb-4239-8255-6039c9ce727a"
-        //"/videos/slow.mov" 
+        src=
+        // "https://firebasestorage.googleapis.com/v0/b/voo-platform.appspot.com/o/assets%2Fslow.mp4?alt=media&token=09d8ecbe-8ebb-4239-8255-6039c9ce727a"
+        "/videos/landing_bg.mp4" 
         type="video/mp4" />
       </video>
 
