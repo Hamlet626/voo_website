@@ -166,5 +166,11 @@
     "privacyTitle": "Privacy Policy",
     "loading": "Loading latest policies...",
     "lastUpdated": "Last Updated: {date}"
+  },
+
+
+  "InvitePage": {
+    "buttonTextProvider": "Join Voo as a Helper",
+    "buttonTextClient": "Download Voo App"
   }
 }

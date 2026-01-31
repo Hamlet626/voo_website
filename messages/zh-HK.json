@@ -162,5 +162,10 @@
     "privacyTitle": "私隱政策",
     "loading": "正在載入最新政策...",
     "lastUpdated": "最後更新：{date}"
+  },
+
+  "InvitePage": {
+    "buttonTextProvider": "加入成為服務商",
+    "buttonTextClient": "下載百事通App"
   }
 }

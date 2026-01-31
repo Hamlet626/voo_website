@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { WEB_APP_LINK, PRO_GOOGLE_PLAY_LINK, PRO_APPLE_STORE_LINK } from '@/app/lib/links';
 
 // --- Data for the features ---
 // You can easily update the content or add more features here.
@@ -53,10 +54,6 @@ const features = [
 
 type FeatureId = 'website' | 'scheduling' | 'ai' | 'messaging';
 
-// --- App Store Links ---
-const APPLE_STORE_LINK = "https://apps.apple.com/us/app/voo-pro-百事通店商/id6740048998";
-const GOOGLE_PLAY_LINK = "https://play.google.com/store/apps/details?id=dev.voo.providers";
-const WEB_APP_LINK = "/signup";
 
 export default function ProsFeatures() {
 
@@ -79,13 +76,13 @@ export default function ProsFeatures() {
 
     if (/android/i.test(userAgent)) {
       setCta({
-        href: GOOGLE_PLAY_LINK,
+        href: PRO_GOOGLE_PLAY_LINK,
         text: t('hero.ctaGoogle'),
         target: '_blank'
       });
     } else if (/iPad|iPhone|iPod/.test(userAgent)) {
       setCta({
-        href: APPLE_STORE_LINK,
+        href: PRO_APPLE_STORE_LINK,
         text: t('hero.ctaApple'),
         target: '_blank'
       });
