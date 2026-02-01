@@ -52,12 +52,13 @@ async function getServiceData(): Promise<ServiceItem[]> {
 }
 
 interface PageProps {
-  params: Promise<{ inviteId: string; locale: string }>;
+  params: Promise<{ inviteId?: string[]; locale: string }>;
   searchParams: Promise<{ type?: string }>;
 }
 
 export default async function InvitePage({ params, searchParams }: PageProps) {
-  const { inviteId, locale } = await params;
+  const inviteIds = (await params).inviteId;
+  const inviteId = inviteIds?.[0];
   const { type } = await searchParams;
   
   // 1. 记录指纹

@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 import { CLIENT_GOOGLE_PLAY_LINK, CLIENT_APPLE_STORE_LINK, PRO_GOOGLE_PLAY_LINK, PRO_APPLE_STORE_LINK } from '@/app/lib/links';
 import { useTranslations } from 'next-intl';
+import { recordFingerprint } from './actions';
 
 interface InviteClientProps {
-  inviteId: string;
+  inviteId?: string;
   userType?: string; // 'client' | 'provider' | undefined
 }
 
@@ -14,14 +15,21 @@ export default function InviteClient({ inviteId, userType }: InviteClientProps) 
 
   // 1. 仅保留 useEffect 用于页面加载时的“静默复制”
   useEffect(() => {
-    const code = `ivid:${inviteId}`;
-    navigator.clipboard.writeText(code).catch(() => {});
+    if (inviteId) {
+      const code = `ivid:${inviteId}`;
+      navigator.clipboard.writeText(code).catch(() => {});
+      
+      const clientUA = navigator.userAgent;
+      recordFingerprint(inviteId, clientUA);
+    }
   }, [inviteId]);
 
   // 2. 将设备检测逻辑移到点击事件中 (这样就不需要 State 了)
   const handleDownload = (targetType: 'client' | 'provider') => {
     // A. 再次强制写入剪贴板
-    navigator.clipboard.writeText(`ivid:${inviteId}`);
+    if (inviteId) {
+      navigator.clipboard.writeText(`ivid:${inviteId}`);
+    }
 
     // B. 在点击瞬间检测设备 (安全，因为点击肯定在客户端发生)
     const u = navigator.userAgent;
