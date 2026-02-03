@@ -50,6 +50,12 @@ export async function recordFingerprint(inviteId?: string, clientUserAgent?: str
   const simpleVersion = osVersion ? osVersion.split('.').slice(0, 2).join('.') : 'unknown';
   // --- 解析 OS 逻辑结束 ---
 
+  if(clientUserAgent==null && 
+    osName === 'unknown' && simpleVersion === 'unknown') {
+    // 如果连 OS 都识别不出来，记录意义不大，直接返回
+    return;
+  }
+
   // 1. 防抖检查 (智能去重)
   try {
     const q = query(
