@@ -2,7 +2,7 @@
 
 import { headers } from 'next/headers';
 import { db } from '@/app/lib/firebase';
-import { collection, addDoc, serverTimestamp, query, where, getDocs } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, query, where, getDocs, Timestamp } from 'firebase/firestore';
 import { UAParser } from 'ua-parser-js';
 
 /**
@@ -110,6 +110,9 @@ export async function recordFingerprint(inviteId?: string, clientUserAgent?: str
 
   // 4. 写入新记录
   try {
+    const expirationDate = new Date();
+    expirationDate.setHours(expirationDate.getHours() + 24);
+
     await addDoc(collection(db, 'app_install_data'), {
       ip: ip,
       os: osName,
@@ -117,6 +120,7 @@ export async function recordFingerprint(inviteId?: string, clientUserAgent?: str
       invite_code: inviteId,
       raw_ua: userAgent,
       timestamp: serverTimestamp(),
+      expires_at: Timestamp.fromDate(expirationDate) // 过期时间 (用于 TTL 自动清理)
     });
     console.log(`[Fingerprint] Recorded: IP=${ip}, Code=${inviteId}`);
   } catch (error) {
