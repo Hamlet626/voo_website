@@ -19,6 +19,7 @@ const HeroSection = () => {
         muted
         playsInline
         preload="auto"
+        poster="/images/landing_bg.jpg" 
         className="absolute right-0 top-0 h-full w-2/3 object-cover"
       >
         <source 

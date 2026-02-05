@@ -112,6 +112,16 @@ export default async function InvitePage({ params, searchParams }: PageProps) {
       </Link>
       </div>
 
+
+      <div className="absolute right-0 top-0 h-full w-2/3 opacity-90">
+        <Image
+          src="/images/landing_bg.jpg" // 替换为你的视频封面图路径
+          alt="Background"
+          fill
+          className="object-cover"
+          priority // 优先加载背景图
+        />
+      </div>
       {/* Background Video */}
       <video
         autoPlay
@@ -119,6 +129,7 @@ export default async function InvitePage({ params, searchParams }: PageProps) {
         muted
         playsInline
         preload="auto"
+        poster="/images/landing_bg.jpg" 
         className="absolute right-0 top-0 h-full w-2/3 object-cover opacity-90"
       >
         <source src="/videos/landing_bg.mp4" type="video/mp4" />
